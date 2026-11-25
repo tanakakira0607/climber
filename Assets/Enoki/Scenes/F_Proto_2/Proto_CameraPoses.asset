@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a466018485083489cd1a052f3b245b, type: 3}
+  m_Name: Proto_CameraPoses
+  m_EditorClassIdentifier: Assembly-CSharp::CameraPosesDatabase
+  CameraPos_Datas:
+  - {fileID: 11400000, guid: 25b8935dc00540b44bce36538e7f7e3c, type: 2}
+  - {fileID: 11400000, guid: c1051d701cddec748b07eee9c11c0921, type: 2}
+  - {fileID: 11400000, guid: 5e1df24c1917d6e4dbd6c2b0f3c90c58, type: 2}
+  - {fileID: 11400000, guid: 47bf5128a4d490044903c80533ce9639, type: 2}
+  - {fileID: 11400000, guid: a276f1b537a8a804f8127339778e5a84, type: 2}
+  - {fileID: 11400000, guid: a12342108b9f2cd47a20e52073c869ca, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114ddc274b0045942ac93b13e68e9dbc, type: 3}
+  m_Name: 3_Blade
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUp
+  PowerUp_Name: "\u5343\u672C\u5203"
+  PowerUp_Info: "\u30D6\u30EC\u30FC\u30C9\u8FFD\u52A0"
+  PowerUp_ID: 3
+  PowerUp_Type: 0
+  MaxLevel: 4
