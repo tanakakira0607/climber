@@ -6,7 +6,9 @@ using UnityEngine.AdaptivePerformance;
 
 public class PlayerStatus : MonoBehaviour//ƒfƒtƒHƒ‹ƒgƒXƒe[ƒ^ƒXAƒtƒƒA“à‚ÅŠl“¾‚µ‚½ƒpƒ[ƒAƒbƒv‚È‚Ç‚ğ“K—p‚·‚é
 {
-    public static int Life=1;//c‚èƒ{[ƒ‹‚Ì”Bc‹@
+    static GameObject PS;
+
+    public static int Life = 1;//c‚èƒ{[ƒ‹‚Ì”Bc‹@
     public static int ATK;//UŒ‚—Í
 
     public static int XP;//ûW‚µ‚½ŒoŒ±’l
@@ -17,8 +19,9 @@ public class PlayerStatus : MonoBehaviour//ƒfƒtƒHƒ‹ƒgƒXƒe[ƒ^ƒXAƒtƒƒA“à‚ÅŠl“¾‚
     public static float ScoreBoost = 1;//ƒXƒRƒAŠl“¾”{—¦
     public static float OverScoreLoss = 1;//“G‚ğƒI[ƒo[ƒLƒ‹‚µ‚½ê‡A’´‰ß‚µ‚½•ª‚Ìƒ_ƒ[ƒW‚É‚æ‚éƒXƒRƒA‚ªŒ¸­‚·‚éB(EnemyStatus.GetDamage‚ğQÆ)
 
-    public static List<PowerUpCard> GotPowerUps;    
+    public static List<PowerUpCard> GotPowerUps = new List<PowerUpCard>();
 
+    public static GameObject PlayerEffect;
     [Header("ˆÈ‰ºA•\¦—p")]
     [Header("ƒvƒŒƒCƒ„[‚Ìƒpƒ‰ƒ[ƒ^")]
 
@@ -31,7 +34,7 @@ public class PlayerStatus : MonoBehaviour//ƒfƒtƒHƒ‹ƒgƒXƒe[ƒ^ƒXAƒtƒƒA“à‚ÅŠl“¾‚
     [SerializeField] int Got_Score = 0;
     [SerializeField] float Score_Boost = 0;
     [SerializeField] float Over_Score_Loss = 0;
-    [SerializeField] List<PowerUpCard> Got_Power_Ups;//Šl“¾—š—ğ‚Æ‚µ‚Ä‚à—˜—p‰Â”\
+    [SerializeField] List<PowerUpCard> Got_Power_Ups = new List<PowerUpCard>();//Šl“¾—š—ğ‚Æ‚µ‚Ä‚à—˜—p‰Â”\
 
     private void Update()
     {
@@ -56,6 +59,37 @@ public class PlayerStatus : MonoBehaviour//ƒfƒtƒHƒ‹ƒgƒXƒe[ƒ^ƒXAƒtƒƒA“à‚ÅŠl“¾‚
 
         //ƒvƒŒƒCƒ„[‰ŠúƒŒƒxƒ‹•ª‚¾‚¯ƒŒƒxƒ‹ƒAƒbƒv
         Debug.Log("‰ŠúƒXƒe[ƒ^ƒX“K—pŠ®—¹");
+    }
+
+    //public static List<PowerUpCard> GetPowerUps()
+
+
+    //public static void StatusChangeTrigger(){ PS.GetComponent<PlayerStatus>().StatusChange(); }
+    public static void StatusChange() {//ƒXƒe[ƒ^ƒXXV‚Ìˆ— 
+        if(PlayerEffect==null)PlayerEffect = GameObject.Find("PlayerEffects");
+
+        ApplyDefaultStatus();
+
+        List<PowerUpCard> Counted_PowerUps_=new List<PowerUpCard>();//ƒXƒe[ƒ^ƒXŠî‘b’lã¸Œnƒpƒ[ƒAƒbƒv‚ğ“K—p‚·‚éˆê˜A‚Ìˆ—
+        foreach (PowerUpCard PUC in GotPowerUps)//í—Ş‚ğ‹L˜^‚·‚é
+        {
+            if (!Counted_PowerUps_.Contains(PUC)) Counted_PowerUps_.Add(PUC);
+        }
+        foreach (PowerUpCard T_PUC in Counted_PowerUps_)//Šeí—Ş‚Ìƒpƒ[ƒAƒbƒv‚ğ‚Á‚Ä‚é” = ƒŒƒxƒ‹‚Å“K—p‚·‚é
+        {
+            int Level = 0;
+            foreach (PowerUpCard PUC in GotPowerUps)
+            {
+                if(PUC==T_PUC)Level++;
+            }
+            T_PUC.Status(Level);
+        }
+
+        foreach (Player_Effect PF in PlayerEffect.GetComponents<Player_Effect>())//Šeƒoƒt‚âƒfƒoƒt‚ğ“K—p‚·‚é
+        {
+            PF.Status();
+        }
+
     }
 
     public static void ScoreReset()

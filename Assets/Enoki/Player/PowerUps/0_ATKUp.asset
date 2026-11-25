@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114ddc274b0045942ac93b13e68e9dbc, type: 3}
+  m_Script: {fileID: 11500000, guid: cee8aff587e554b408f7be5922124339, type: 3}
   m_Name: 0_ATKUp
-  m_EditorClassIdentifier: Assembly-CSharp::PowerUp
+  m_EditorClassIdentifier: Assembly-CSharp::ATKUp
   PowerUp_Name: "\u653B\u6483\u306F\u6700\u5927\u306E\u9632\u5FA1"
   PowerUp_Info: "\u653B\u6483\u529BUP"
   PowerUp_ID: 0

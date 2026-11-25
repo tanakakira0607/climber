@@ -9,7 +9,7 @@ public class PowerUpCard : ScriptableObject
     public PowerUpType PowerUp_Type;
     public int MaxLevel;
 
-    //オーバーライド用
+    //オーバーライド用。反映するタイミング
     public virtual void MachineStart(int Level) { }//部屋開始時
 
     public virtual void MachineEnd(int Level) { }//部屋クリア時
@@ -18,7 +18,7 @@ public class PowerUpCard : ScriptableObject
 
     public virtual void FlipperBreak(int Level) { }//フリッパーが破壊されたとき
 
-    public virtual void Status(int Level) { }//ステータス上昇系
+    public virtual void Status(int Level) { }//ステータス上昇系。ステータスを更新するときに使う
 
     public virtual void TimeTrigger(int Level, float Time) { }//時間経過で発動系
 }

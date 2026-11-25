@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114ddc274b0045942ac93b13e68e9dbc, type: 3}
+  m_Script: {fileID: 11500000, guid: e4e4f4f614769e44c9cedc4c24c65926, type: 3}
   m_Name: 2_ScoreUp
-  m_EditorClassIdentifier: Assembly-CSharp::PowerUp
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreUp
   PowerUp_Name: "\u5F37\u6B32\u306E\u6975\u610F"
   PowerUp_Info: "\u30B9\u30B3\u30A2\u7372\u5F97\u91CFUP"
   PowerUp_ID: 2

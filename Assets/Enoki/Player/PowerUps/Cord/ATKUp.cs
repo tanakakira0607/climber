@@ -8,7 +8,7 @@ public class ATKUp : PowerUpCard//UŒ‚—Íã¸ƒXƒLƒ‹
 
         if (Level <= 3) ATKUpValue = Level * 5;
         else if (Level <= 9) ATKUpValue = 15 + Level - 3;
-        else if (Level == 10) ATKUpValue = 25;
+        else if (Level >= 10) ATKUpValue = 25 + Level -10;
 
         PlayerStatus.ATK += ATKUpValue;
     }

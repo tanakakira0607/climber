@@ -1537,7 +1537,7 @@ MonoBehaviour:
   Cam: {fileID: 0}
   CameraPositions: {fileID: 11400000, guid: ab8b172eb42fb1f41867569dd8e19cf4, type: 2}
   LastStageNumber: 1234
-  Scores: 000000000000000000000000000000000000000000000000
+  Scores: 
   FloorScore: 0
 --- !u!1 &512212713
 GameObject:
