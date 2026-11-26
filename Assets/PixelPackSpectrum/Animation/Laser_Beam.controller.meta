@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f680b5f4c84175a4c836af7cb2ea5d40
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206206
+  packageName: Free Mega Spectrum Pixel Pack
+  packageVersion: 1.2
+  assetPath: Assets/PixelPackSpectrum/Animation/Laser_Beam.controller
+  uploadId: 943586
