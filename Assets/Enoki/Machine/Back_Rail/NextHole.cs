@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class NextHole : MachineParts
 {
-    [SerializeField] GameObject ForWarpPos;
-    [SerializeField] GameObject ForBallGoPos;
+    GameObject ForWarpPos;//ボールが向かう座標を取得する
+    GameObject ForBallGoPos;//ボールが背景で移動開始する地点
     [SerializeField] int NextNum = 1;
     [SerializeField] Stage ST;
     [SerializeField] float WaitTime=3f;
@@ -13,6 +13,8 @@ public class NextHole : MachineParts
         {
             GameObject Manager = GameObject.Find("GameManager");
             ST= Manager.GetComponent<Stage>();
+            ForWarpPos = transform.Find("Enter_Pos").gameObject;
+            ForBallGoPos = transform.Find("Next_Anchor")?.gameObject ?? transform.Find("End_Anchor").gameObject;
         }
     }
     private void OnTriggerEnter2D(Collider2D col)

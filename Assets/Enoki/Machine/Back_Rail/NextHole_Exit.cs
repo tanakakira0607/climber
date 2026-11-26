@@ -2,8 +2,8 @@ using UnityEngine;
 using System.Collections;
 public class NextHole_Exit : MachineParts
 {
-    [SerializeField] GameObject ForWarpPos;
-    [SerializeField] Stage ST;
+    GameObject ForWarpPos;
+    Stage ST;
     [SerializeField] Vector2 ShotVector;
     [SerializeField] Machine Machine;
     [SerializeField] float Delay;
@@ -14,6 +14,7 @@ public class NextHole_Exit : MachineParts
             GameObject Manager = GameObject.Find("GameManager");
             ST= Manager.GetComponent<Stage>();
         }
+        ForWarpPos = transform.Find("Exit_WarpPos").gameObject;
     }
     void OnTriggerEnter2D(Collider2D col)
     {

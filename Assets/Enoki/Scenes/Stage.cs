@@ -29,7 +29,7 @@ public class Stage : MonoBehaviour // statics = “G‚Ì‹­‰»”{—¦AŒ»İ‚Ì•”‰®”Ô†
     public int SumFloorScore() {
         int Sum = 0;
         foreach (int i in Scores) Sum += i;
-        FloorScore = Sum;
+        FloorScore = Sum;//•\¦—p
         return Sum;
     }
     public void StageChange(int NextStageNumber){

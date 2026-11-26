@@ -6,6 +6,8 @@ public class Machine : MonoBehaviour
     [Header("自分の部屋(マシン)番号")]
     public int MachineNumber = 0;//
     [SerializeField] GameObject NextStages;
+    [SerializeField] GameObject[] Structures;//マシン内の地形(ランダム生成を想定)
+    [SerializeField] GameObject[] Enemy_Spawns;//マシン内の敵出現テーブル(ランダム生成を想定)
     private void Start()
     {
        

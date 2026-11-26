@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe2caac848a01142bfa34ba89282216, type: 3}
   m_Name: Proto_2
   m_EditorClassIdentifier: Assembly-CSharp::CameraPositionData
-  CameraPosiotion: {x: -44.3, y: 9.2}
+  CameraPosiotion: {x: 88, y: 158}
   UseDefaultCameraSize: 1
   CameraSize: 15
